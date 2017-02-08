@@ -1,0 +1,13 @@
+<h4>Hunger</h4>
+<div class="progress">
+    <div id="bar1" class="
+    {% if tamagotchi.get("hunger") > 85 %}
+    bg-danger
+    {% elseif tamagotchi.get("hunger") > 60 %}
+    bg-warning
+    {% elseif tamagotchi.get("hunger") > 25 %}
+    bg-success
+    {% else %}
+    {% endif %}
+    progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: {{ tamagotchi.get("hunger") }}%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>

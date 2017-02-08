@@ -1,0 +1,13 @@
+<h4>Boredom</h4>
+<div class="progress">
+    <div id="bar3" class="
+    {% if tamagotchi.get("attention") > 85 %}
+    bg-danger
+    {% elseif tamagotchi.get("attention") > 60 %}
+    bg-warning
+    {% elseif tamagotchi.get("attention") > 25 %}
+    bg-success
+    {% else %}
+    {% endif %}
+    progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: {{ tamagotchi.get("attention") }}%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>

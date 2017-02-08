@@ -13,6 +13,20 @@ $(function() {
       $("div.card-block").html(response);
     });
   }
-
+  $("#feed-button").click(function() {
+    $.get("/feed", function(response) {
+      $("#feed-form").html(response);
+    });
+  });
+  $("#nap-button").click(function() {
+    $.get("/nap", function(response) {
+      $("#nap-form").html(response);
+    });
+  });
+  $("#play-button").click(function() {
+    $.get("/play", function(response) {
+      $("#play-form").html(response);
+    });
+  });
   interval = setInterval(function() {update()}, 1000);
 });

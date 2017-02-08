@@ -22,22 +22,22 @@
         return $app["twig"]->render("tamahome.html.twig", ["tamagotchi" => $tamagotchi]);
     });
 
-    $app->post("/feed", function() use ($app) {
+    $app->get("/feed", function() use ($app) {
         $tamagotchi = Tamagotchi::getActiveTama();
         $tamagotchi->feed();
-        return $app["twig"]->render("tamahome.html.twig", ["tamagotchi" => $tamagotchi]);
+        return $app["twig"]->render("feed-bar.html.twig", ["tamagotchi" => $tamagotchi]);
     });
 
-    $app->post("/nap", function() use ($app) {
+    $app->get("/nap", function() use ($app) {
         $tamagotchi = Tamagotchi::getActiveTama();
         $tamagotchi->nap();
-        return $app["twig"]->render("tamahome.html.twig", ["tamagotchi" => $tamagotchi]);
+        return $app["twig"]->render("nap-bar.html.twig", ["tamagotchi" => $tamagotchi]);
     });
 
-    $app->post("/play", function() use ($app) {
+    $app->get("/play", function() use ($app) {
         $tamagotchi = Tamagotchi::getActiveTama();
         $tamagotchi->play();
-        return $app["twig"]->render("tamahome.html.twig", ["tamagotchi" => $tamagotchi]);
+        return $app["twig"]->render("play-bar.html.twig", ["tamagotchi" => $tamagotchi]);
     });
 
     $app->get("/increment", function() use ($app) {

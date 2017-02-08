@@ -15,25 +15,30 @@
         <div class="card">
             <img id="tamagotchi-gif" class="card-img-top" src="image/tamagotchi.gif" alt="tamagotchi doing his thang">
             <div class="card-block">
-                <form action="/feed" method="post">
+                <form id="feed-form" action="/feed" method="post">
+                  <h4>Hunger</h4>
                     <div class="progress">
                         <div id="bar1" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: {{ tamagotchi.get("hunger") }}%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <button class="btn">Feed</button>
                 </form>
-                <form action="/nap" method="post">
+                <form id="nap-form" action="/nap" method="post">
+                  <h4>Exhaustion</h4>
                     <div class="progress">
                         <div id="bar2" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: {{ tamagotchi.get("sleep") }}%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <button class="btn">Nap</button>
                 </form>
-                <form action="/play" method="post">
+                <form id="play-form" action="/play" method="post">
+                  <h4>Boredom</h4>
                     <div class="progress">
                         <div id="bar3" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: {{ tamagotchi.get("attention") }}%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <button class="btn">Play</button>
                 </form>
             </div>
+        </div>
+        <div>
+            <button id="feed-button" class="btn">Feed</button>
+            <button id="nap-button" class="btn">Nap</button>
+            <button id="play-button" class="btn">Play</button>
         </div>
     </body>
 </html>

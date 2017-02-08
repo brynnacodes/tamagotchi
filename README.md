@@ -22,9 +22,11 @@ _Make sure to have composer installed before running this app._
 * _Spec 1: Create Tamagotchi object in php_
 * _Spec 2: Users can create a Tamagotchi object and give it a name_
 * _Spec 3: Clicking the Feed, Nap, or Play button will decrement the associated value by 10_
-* _Spec 4:_
-* _Spec 5:_
-
+* _Spec 4: Values will constantly increase by one and post to the page_
+* _Spec 5: Upon reaching 100 in any category the tamagotchi will die_
+* _Spec 6: When a tamagotchi dies, a game over screen appears, with a button linked to the homepage_
+* _Spec 7: When users click a button, a unique gif will play_
+* _Spec 8: Users will be locked out of clicking buttons for several seconds_
 
 ## Known Bugs
 
