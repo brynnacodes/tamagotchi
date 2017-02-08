@@ -23,17 +23,29 @@ class Tamagotchi
 
     function feed()
     {
-        $this->hunger -= 10;
+        if ($this->hunger >= 10) {
+            $this->hunger -= 10;
+        } else {
+            $this->hunger = 0;
+        }
     }
 
     function nap()
     {
-        $this->sleep -= 10;
+      if ($this->sleep >= 10) {
+          $this->sleep -= 10;
+      } else {
+          $this->sleep = 0;
+      }
     }
 
     function play()
     {
-        $this->attention -= 10;
+      if ($this->attention >= 10) {
+          $this->attention -= 10;
+      } else {
+          $this->attention = 0;
+      }
     }
 
     function increment()
@@ -45,7 +57,7 @@ class Tamagotchi
 
     function isDead()
     {
-      return ($this->hunger >= 100 || $this->sleep >= 100 || $this->attention >= 100);
+      return (($this->hunger == 100) || ($this->sleep == 100) || ($this->attention == 100));
     }
 
     static function getActiveTama() {

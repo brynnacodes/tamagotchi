@@ -16,7 +16,7 @@
         return $app['twig']->render('newtama.html.twig');
     });
 
-    $app->post("/Tamagotchis", function() use ($app) {
+    $app->post("/home", function() use ($app) {
         $tamagotchi = new Tamagotchi($_POST['name']);
         $tamagotchi->save();
         return $app["twig"]->render("tamahome.html.twig", ["tamagotchi" => $tamagotchi]);
@@ -40,11 +40,14 @@
         return $app["twig"]->render("tamahome.html.twig", ["tamagotchi" => $tamagotchi]);
     });
 
-    $app->post("/increment", function() {
+    $app->get("/increment", function() use ($app) {
         $tamagotchi = Tamagotchi::getActiveTama();
-        $tamagotchi->increment();
-        $tamagotchi->save();
-        echo [$tamagotchi->get("hunger"), $tamagotchi->get("sleep"), $tamagotchi->get("attention")];
+        if ($tamagotchi->isDead()) {
+            return $app["twig"]->render("dead.html.twig", ["tamagotchi" => $tamagotchi]);
+        } else {
+            $tamagotchi->increment();
+            return $app["twig"]->render("bars.html.twig", ["tamagotchi" => $tamagotchi]);
+        }
     });
 
     return $app;
