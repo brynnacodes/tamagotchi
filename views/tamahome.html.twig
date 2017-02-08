@@ -4,7 +4,7 @@
         <title>Create a Tamagotchi!</title>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="css/styles.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Barrio" rel="stylesheet">
         <script src="js/jquery-3.1.1.js"></script>
         <script src="js/scripts.js"></script>
     </head>
@@ -13,7 +13,7 @@
             <h1 id="jumbotron-header">Welcome to {{ tamagotchi.get('name') }}'s home!</h1>
         </div>
         <div class="card">
-            <img id="tamagotchi-gif" class="card-img-top" src="image/dance.gif" alt="tamagotchi doing his thang">
+            <img id="tamagotchi-gif" class="card-img-top" src="image/hatch.gif" alt="tamagotchi doing his thang">
             <div class="card-block">
                 <form id="feed-form" action="/feed" method="post">
                   <h4>Hunger</h4>
@@ -35,10 +35,10 @@
                 </form>
             </div>
         </div>
-        <div id="buttons-div">
-            <button id="feed-button" class="btn">Feed</button>
-            <button id="nap-button" class="btn">Nap</button>
-            <button id="play-button" class="btn">Play</button>
+        <div id="buttons-div" class="btn-group btn-group-lg">
+            <button id="feed-button" class="btn bg-success" disabled>Feed</button>
+            <button id="nap-button" class="btn bg-success" disabled>Nap</button>
+            <button id="play-button" class="btn bg-success" disabled>Play</button>
         </div>
     </body>
 </html>

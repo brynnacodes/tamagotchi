@@ -1,15 +1,19 @@
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Create a Tamagotchi!</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-    <form id="name-form" action="/home" method="post">
-      <label for="name">Enter a name: </label>
-      <input id="name" type="text" name="name">
-      <button type="submit" class="btn">Submit</button>
-    </form>
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <title>Create a Tamagotchi!</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1></h1>
+        <div class="card">
+            <img id="egg" class="card-img-top" src="image/egg.gif" alt="an egg">
+            <form id="name-form" action="/home" method="post">
+                <label for="name">Enter a name: </label>
+                <input id="name" type="text" name="name">
+                <button type="submit" class="btn btn-lg bg-danger">Submit</button>
+            </form>
+        </div>
+    </body>
 </html>

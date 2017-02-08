@@ -1,7 +1,13 @@
 /*newtama.html.twig styles*/
+
 #name-form {
-  margin-top: 20%;
   text-align: center;
+}
+
+#egg{
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*tamahome.html.twig styles*/
@@ -14,4 +20,19 @@
   height: 400px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#buttons-div {
+  margin-left: 40%;
+}
+
+button {
+  color: white;
+  font-family: 'Barrio', cursive;
+  letter-spacing: 5px;
+}
+
+h4 {
+  font-family: 'Barrio', cursive;
+  letter-spacing: 5px;
 }
