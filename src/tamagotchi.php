@@ -50,9 +50,9 @@ class Tamagotchi
 
     function increment()
     {
-        $this->hunger++;
-        $this->sleep++;
-        $this->attention++;
+        $this->hunger+=.5;
+        $this->sleep+=.5;
+        $this->attention+=.5;
     }
 
     function isDead()
