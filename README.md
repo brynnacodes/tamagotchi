@@ -12,8 +12,8 @@ _Tamagotchis are a small alien species that deposited an egg on Earth to see wha
 
 * _Clone this repository_
 * _In the main project folder, run composer install to install program dependencies_
-* _From the web folder, start local server_
-* _In a web browser, navigate to your server's local address_
+* _From the web folder, start local server by entering `php -S localhost:8000`_
+* _In your preferred web browser, navigate to localhost:8000_
 
 _Make sure to have composer installed before running this app._
 
